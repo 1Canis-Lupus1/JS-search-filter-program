@@ -101,7 +101,7 @@ function findCafe(inp) {
       let search_id = cafe[i].place_id;
       // console.log(search_id);
       for (let j = 0; j < places.length; j++) {
-        if (places[j].id === search_id) {
+        if (places[j].id === search_id){
           let new_obj = Object.assign({}, places[i]);
           new_obj["name"] = cafe[i].name;
           delete new_obj.id;
