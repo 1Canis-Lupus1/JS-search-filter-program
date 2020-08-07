@@ -98,12 +98,11 @@ for(let i=0;i<cafe.length;i++){
         let search_id=cafe[i].place_id;
         // console.log(search_id);
         for(let j=0;j<places.length;j++){
-        // Copy all the properties of current places object
         let new_obj=Object.assign({},places[i]);
         new_obj["name"]=cafe[i].name;
         delete new_obj.id;
-        console.log(new_obj);
-        break;
+        Result.push(new_obj);
         }
     }
+    console.log(Result);
 }
