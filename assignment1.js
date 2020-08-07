@@ -93,12 +93,13 @@ input = input.toUpperCase();
 //console.log(input);
 let Result=[];
 for(let i=0;i<cafe.length;i++){
-    if(cafe[i].name.toUpperCase() === input){
-        let search_id=cafe[i].place_id;
-        for(let j=0;j<places.length;j++){
-            // Copy all the properties of current places object
-            let new_obj=Object.assign({},places[i]);
-            console.log(new_obj);
-        }
+    if(cafe[i].name.toUpperCase().startsWith(input) === true){
+        console.log(`MAtched with ${cafe[i].name.toUpperCase()}`);
+        // let search_id=cafe[i].place_id;
+        // for(let j=0;j<places.length;j++){
+        //     // Copy all the properties of current places object
+        //     let new_obj=Object.assign({},places[i]);
+        //     console.log(new_obj);
+        // }
     }
 }
