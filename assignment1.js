@@ -90,4 +90,15 @@ let places = [
 
 let input = promt("Enter Cafe Name:");
 input = input.toUpperCase();
-console.log(input);
+//console.log(input);
+let Result=[];
+for(let i=0;i<cafe.length;i++){
+    if(cafe[i].name.toUpperCase() === input){
+        let search_id=cafe[i].place_id;
+        for(let j=0;j<places.length;j++){
+            // Copy all the properties of current places object
+            let new_obj=Object.assign({},places[i]);
+            console.log(new_obj);
+        }
+    }
+}
